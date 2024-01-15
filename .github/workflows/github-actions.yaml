@@ -12,9 +12,6 @@ jobs:
           distribution: 'temurin'
       - name: Run the Maven verify phase
         run: mvn clean test
-#
-#      - name: Run tests
-#        run: ./mvnw clean test
 
       - name: Load test report history
         uses: actions/checkout@v3
@@ -30,7 +27,7 @@ jobs:
         with:
           gh_pages: gh-pages
           allure_history: allure-history
-          allure_results: build/allure-results
+          allure_results: target/allure-results
 
       - name: Publish test report
         uses: peaceiris/actions-gh-pages@v3
