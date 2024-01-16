@@ -30,9 +30,8 @@ jobs:
           gh_pages: gh-pages
           allure_history: allure-history
           allure_report: allure-report
+          allure_static_report: allure_static_report
           allure_results: target/allure-results
-
-
 
       - name: Publish test report
         uses: peaceiris/actions-gh-pages@v3
@@ -42,3 +41,17 @@ jobs:
           publish_branch: gh-pages
           publish_dir: allure-history
           keep_files: true
+
+      - name: Generate artifact name
+        id: generate-name
+        run: |
+          mkdir artifacts
+          zip -r artifacts/report.zip allure-static-report/
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: test-report
+          path: artifacts/report.zip
+
+

@@ -22,7 +22,7 @@ jobs:
           path: gh-pages
 
       - name: Build test report
-        uses: simple-elf/allure-report-action@master
+        uses: ramachandranr2007/allure-report-action@master
         if: always()
         with:
           gh_pages: gh-pages
@@ -37,3 +37,15 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: allure-history
+
+      - name: Generate artifact name
+        id: generate-name
+        run: |
+          mkdir artifacts
+          zip -r artifacts/report.zip allure-static-report/
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: test-report
+          path: artifacts/report.zip
