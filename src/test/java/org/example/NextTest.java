@@ -12,7 +12,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SpringBootTest
-@SpringBootConfiguration
+//@SpringBootConfiguration
 @Epic("Test Portal")
 @Feature("Portal Reachable")
 public class NextTest
