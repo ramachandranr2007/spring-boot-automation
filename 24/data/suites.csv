@@ -1,0 +1,2 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Tue Jan 16 18:34:35 GMT 2024","Tue Jan 16 18:34:36 GMT 2024","1089","","org.example.AppTest","","org.example.AppTest","testGet","Test Spring @Autowired Integration","Invalid Login Test with Invalid Username and Invalid Password."
