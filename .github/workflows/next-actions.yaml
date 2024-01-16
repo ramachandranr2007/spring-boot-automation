@@ -1,7 +1,7 @@
 name: Run tests and publish report for Next Actions
 on:
   workflow_dispatch:
-    
+
 jobs:
   test:
     runs-on: ubuntu-latest
