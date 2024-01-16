@@ -1,0 +1,2 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"failed","Tue Jan 16 18:35:35 GMT 2024","Tue Jan 16 18:35:36 GMT 2024","1044","","org.example.NextTest","","org.example.NextTest","testGet","Test Spring @Autowired Integration","Portal Description"
