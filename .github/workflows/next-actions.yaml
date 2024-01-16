@@ -13,7 +13,7 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
       - name: Run the Maven verify phase
-        run: mvn clean test
+        run: mvn clean test -Dtest=NextTest
 
       - name: Load test report history
         uses: actions/checkout@v3
