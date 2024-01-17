@@ -31,6 +31,11 @@ jobs:
           ref: gh-pages
           path: gh-pages
 
+      - name: Generate Static Report
+        id: generate-static-report
+        run: |
+          allure generate --clean --single-file allure-report -o new-allure-report     
+
       - name: Build test report
         uses: ramachandranr2007/allure-report-action@master
         if: always()
@@ -39,11 +44,6 @@ jobs:
           allure_history: allure-history
           allure_report: allure-report
           allure_results: target/allure-results
-
-      - name: Generate Static Report
-        id: generate-static-report
-        run: |
-          allure generate --clean --single-file allure-report -o new-allure-report 
 
       - name: Publish test report
         uses: peaceiris/actions-gh-pages@v3
