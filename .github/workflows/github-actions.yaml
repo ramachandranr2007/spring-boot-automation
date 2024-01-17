@@ -13,6 +13,16 @@ jobs:
       - name: Run the Maven verify phase
         run: mvn clean test -Dtest=AppTest
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install Allure Command Line Tool
+        id: install-allure-commandline
+        run: |
+          npm install -g allure-commandline --save-dev  
+
       - name: Load test report history
         uses: actions/checkout@v3
         if: always()
