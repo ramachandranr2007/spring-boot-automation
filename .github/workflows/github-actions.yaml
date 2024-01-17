@@ -57,7 +57,7 @@ jobs:
         id: generate-name
         run: |
           mkdir artifacts
-          zip -r artifacts/report.zip allure-static-report/
+          zip -r artifacts/report.zip new-allure-report/
 
       - name: Upload artifact
         uses: actions/upload-artifact@v2
